@@ -2,13 +2,17 @@
 import { ref, onMounted } from 'vue'
 import EventService from '@/services/EventService.js'
 
+const props = defineProps({
+  id: {
+    required: true,
+  },
+})
+
 const event = ref(null)
-const id = ref(123)
 
 onMounted(() => {
-  EventService.getEvent(id.value)
+  EventService.getEvent(props.id)
     .then((response) => {
-      console.log(response)
       event.value = response.data
     })
     .catch((error) => {
@@ -18,7 +22,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div v-if="event">
     <h1>{{ event.title }}</h1>
     <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
     <p>{{ event.description }}</p>
