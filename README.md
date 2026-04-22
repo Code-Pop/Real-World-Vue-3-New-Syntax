@@ -33,3 +33,5 @@ npm run build
 ```sh
 npm run lint
 ```
+
+This repository is for learning purposes only, it's not for production use.
