@@ -1,3 +1,5 @@
+**This repository is for learning purposes only, it's not for production use.**
+
 # real-world-vue
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -34,4 +36,3 @@ npm run build
 npm run lint
 ```
 
-**This repository is for learning purposes only, it's not for production use.**
